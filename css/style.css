@@ -1,0 +1,44 @@
+.btn{
+  position: relative;/*5 позиционирование кнопки green*/
+  display: inline-flex;
+  border: none;
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 3px;
+  background-color: #008080;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*1 before для красного кубика*/
+.btn::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
+  background-color: red;
+/*3*/
+  transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*2*/
+.btn:hover::before{
+  transform: translatey(-35px);
+}
+/*4 для кубика которыей станет на место красного*/
+.btn::after{
+  position: absolute;/*6*/
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  background-color: green;
+}
+
+.btn:hover,
+.btn:focus{
+  background-color: #d87093;
+}
