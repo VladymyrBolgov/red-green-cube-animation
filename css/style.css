@@ -30,7 +30,8 @@
   transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*2*/
-.btn:hover::before{
+.btn:hover::before, 
+.btn:focus::before{
   transform: translateY(-35px);
 }
 /*4 для кубика которыей станет на место красного*/
@@ -52,7 +53,8 @@
   background-color: orange;
 }
 /*7*/
-.btn:hover::after{
+.btn:hover::after,
+.btn:focus::after{
   transform: translateY(-50%);
 }
 
