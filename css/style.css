@@ -10,10 +10,12 @@
   font: inherit;
   cursor: pointer;
   transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow: hidden;/*8*/
 }
 /*1 before для красного кубика*/
 .btn::before{
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -25,17 +27,26 @@
 }
 /*2*/
 .btn:hover::before{
-  transform: translatey(-35px);
+  transform: translateY(-35px);
 }
 /*4 для кубика которыей станет на место красного*/
 .btn::after{
   position: absolute;/*6*/
-  content: "";
+  top: 50%;
+  left: 30px;
+  transform: translateY(calc(-50% + 35px));
+  transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1);/*6*/
+
+  content: '';
   display: inline-block;
   width: 20px;
   height: 20px;
-
-  background-color: green;
+  
+  background-color: orange;
+}
+/*7*/
+.btn:hover::after{
+  transform: translateY(-50%);
 }
 
 .btn:hover,
