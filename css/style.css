@@ -21,6 +21,10 @@
   height: 20px;
   margin-right: 5px;
 
+  /* можно так подставить картинку bg red убрать
+  background-image: url();
+  background-size: contain;*/
+
   background-color: red;
 /*3*/
   transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,6 +45,9 @@
   display: inline-block;
   width: 20px;
   height: 20px;
+/* можно так подставить картинку bg orange убрать
+  background-image: url();
+  background-size: contain;*/
   
   background-color: orange;
 }
